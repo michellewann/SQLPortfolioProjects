@@ -59,6 +59,7 @@ SELECT c.state,
  ORDER BY profit_margin_rank;
  
 -- 6.Monthly Profits
+
 WITH monthly_profit AS (
 SELECT EXTRACT(MONTH FROM date) AS date_month,
        ROUND(CAST(SUM(profit) AS numeric), 2) AS Total_Profit 
